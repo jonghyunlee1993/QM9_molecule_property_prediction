@@ -187,7 +187,7 @@ class QM9DGLDataset(Dataset):
             src, dst, w = self.connect_fully(edge, num_atoms)
         else:
             src, dst, w = self.connect_partially(edge)
-        w = self.to_one_hot(w, self.num_bonds).astype(DTYPE)
+#         w = self.to_one_hot(w, self.num_bonds).astype(DTYPE)
 
         # Create graph
         G = dgl.graph((src, dst))
